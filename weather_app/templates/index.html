@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+          <h1>Homepage</h1>
+
+          <p>
+            > GET http://127.0.0.1:8000/api/all_weather_data/ - get all weather data
+            <br><br>
+            <a href="{% url 'all-weather-data' %}">http://127.0.0.1:8000/api/all_weather_data/</a></p>
+          <p>
+            > POST http://127.0.0.1:8000/api/get_weather_record_by_date/ - get weather record by date
+            <br><br>
+            <a href="{% url 'get-weather-record-by-date' %}">http://127.0.0.1:8000/api/get_weather_record_by_date/</a></p>
+          <p>
+            > POST http://127.0.0.1:8000/api/get_weather_record_by_location/ - get weather record by location
+            <br><br>
+            <a href="{% url 'get-weather-record-by-location' %}">http://127.0.0.1:8000/api/get_weather_record_by_location/</a></p>
+          <p>
+            > POST http://127.0.0.1:8000/api/get_extreme_weather/ - get extreme weather by location
+            <br><br>
+            <a href="{% url 'get-extreme-weather' %}">http://127.0.0.1:8000/api/get_extreme_weather/ </a></p>
+          <p>
+            > POST http://127.0.0.1:8000/api/add_weather_data/ - create new weather data
+            <br><br>
+            <a href="{% url 'add-weather-data' %}">http://127.0.0.1:8000/api/add_weather_data/</a></p>
+          <p>
+            > GET http://127.0.0.1:8000/api/delete_weather_data/ - delete weather data
+            <br><br>
+            <a href="{% url 'delete-weather-data' %}">http://127.0.0.1:8000/api/delete_weather_data/</a></p>
+          <p>
+            > GET http://127.0.0.1:8000/api/update_weather_data/ - update existing weather data
+            <br><br>
+            <a href="{% url 'update-weather-data' %}">http://127.0.0.1:8000/api/update_weather_data/</a> </p>
+
+        
+
+{% endblock %}

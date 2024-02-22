@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <h1>Update Record Details</h1>
+        <!-- <form action="update-weather-detail/{{data_update.pk}}" method="post"> -->
+        <form action="{% url 'update-weather-detail' pk=data_update.pk %}" method="post">
+
+            {% csrf_token %}
+
+            Location: <br>
+            <input name="location" value="{{data_update.location}}">
+            <br><br>
+            Year: <br>
+            <input name="year" value="{{data_update.year}}">
+            <br><br>
+            Month: <br>
+            <input name="month" value="{{data_update.month}}">
+            <br><br> 
+            Day: <br>
+            <input name="day" value="{{data_update.day}}">
+            <br><br>
+            Daily Rainfall Total (mm): <br>
+            <input name="daily_rainfall_total" value="{{data_update.daily_rainfall_total}}">
+            <br><br>
+            Highest 30 min Rainfall (mm): <br>
+            <input name="highest_30min_rainfall" value="{{data_update.highest_30min_rainfall}}">
+            <br><br>
+            Highest 60 min Rainfall (mm) : <br>
+            <input name="highest_60min_rainfall" value="{{data_update.highest_60min_rainfall}}">
+            <br><br>
+            Highest 120 min Rainfall (mm): <br>
+            <input name="highest_120min_rainfall" value="{{data_update.highest_120min_rainfall}}">
+            <br><br>
+            Mean Temperature (°C): <br>
+            <input name="mean_temperature" value="{{data_update.mean_temperature}}">
+            <br><br> 
+            Maximum Temperature (°C): <br>
+            <input name="max_temperature" value="{{data_update.max_temperature}}">
+            <br><br>
+            Minimum Temperature (°C): <br>
+            <input name="min_temperature" value="{{data_update.min_temperature}}">
+            <br><br>
+            Mean Wind Speed (km/h): <br>
+            <input name="mean_wind_speed" value="{{data_update.mean_wind_speed}}">
+            <br><br>
+            Max Wind Speed (km/h): <br>
+            <input name="max_wind_speed" value="{{data_update.max_wind_speed}}">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+{% endblock %}

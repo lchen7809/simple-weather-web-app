@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+
+        <h1> Update Weather Data</h1>
+        <table border="1">
+            <tr>
+                <td>Location  </td>
+                <td> Year </td>
+                <td> Month </td>
+                <td> Day </td>
+                <td> Daily Rainfall Total (mm) </td>
+                <td> Highest 30 min Rainfall (mm) </td>
+                <td> Highest 60 min Rainfall (mm) </td>
+                <td> Highest 120 min Rainfall (mm) </td>
+                <td> Mean Temperature (°C) </td>
+                <td> Maximum Temperature (°C) </td>
+                <td> Minimum Temperature (°C) </td>
+                <td> Mean Wind Speed (km/h) </td>
+                <td> Max Wind Speed (km/h) </td>
+                <td> Delete Record </td>
+            </tr>
+            {% for x in weather_data %}
+            <tr>
+                <td>{{ x.location }}</td>
+                <td>{{ x.year }}</td>
+                <td>{{ x.month }}</td>
+                <td>{{ x.day }}</td>
+                <td>{{ x.daily_rainfall_total }}</td>
+                <td>{{ x.highest_30min_rainfall }}</td>
+                <td>{{ x.highest_60min_rainfall }}</td>
+                <td>{{ x.highest_120min_rainfall }}</td>
+                <td>{{ x.mean_temperature }}</td>
+                <td>{{ x.max_temperature }}</td>
+                <td>{{ x.min_temperature }}</td>
+                <td>{{ x.mean_wind_speed }}</td>
+                <td>{{ x.max_wind_speed }}</td>
+                <td><a href="../update_weather_detail/{{x.pk}}">Update</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+{% endblock %}

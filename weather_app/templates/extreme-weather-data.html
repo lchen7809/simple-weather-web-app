@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Extreme Weather Data for <i>{{ location }}</i>  on <i>{{ date }}</i> </h1>
+    <table border="1">
+        <tr>
+            <th>Daily Rainfall Total (mm)</th>
+            <th>Maximum Temperature (°C)</th>
+            <th>Max Wind Speed (km/h)</th>
+
+        </tr>
+        <tr>
+
+            <td>{{ weather_data.daily_rainfall_total }}</td>
+            <td>{{ weather_data.max_temperature }}</td>
+            <td>{{ weather_data.max_wind_speed }}</td>
+        </tr>
+    </table>
+
+{% endblock %}

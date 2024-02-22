@@ -1,0 +1,30 @@
+# README 
+# This is a RESTFUL API application done with Python and Django, 
+# containing weather data from the "area_clean_data.csv" csv file, 
+# to allow weather man to query data from the database as and when they need. 
+
+# Django admin superuser
+# username: student
+# password : simplepass123 
+
+# ############# How to run the application:###############
+# Navigate to this file: cd weather_app
+# Create virtual environment: python3 -m venv myvenv
+# Navigate to virtual environment: cd ../myvenv/bin
+# Activate virtual environment:  source activate
+# Install a new application : pip3 install schedule
+# Install django : pip3 install django ‘or’ python3 -m pip install django
+# Install REST Framework : pip3 install djangorestframework
+# Navigate to this file: cd weather_project
+# Populate database with csv file: python3 ./scripts/loadRecord.py
+# python3 manage.py makemigrations
+# python3 manage.py migrate
+# Run server: python3 manage.py runserver
+# open http://127.0.0.1:8000/
+
+
+
+
+
+
+

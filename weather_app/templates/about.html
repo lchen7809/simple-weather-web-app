@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h1>RESTful Weather Web Application  </h1>
+        <p>This is a RESTFUL API application done with Python and Django, 
+            containing weather data from the "area_clean_data.csv" csv file, 
+            to allow weather man to query data from the database as and when they need. 
+        </p>
+
+        <br><br>
+
+        <h2>Django admin superuser</h2>
+        <p>username: student</p>
+        <p>password : simplepass123</p>
+    
+        
+        <br><br>
+
+        <h2>How to run the application:</h2>
+        <p>
+            <ol>
+                <li>Navigate to this file: cd weather_app</li>
+                <li>Create virtual environment: python3 -m venv myvenv</li>
+                <li>Navigate to virtual environment: cd ../myvenv/bin</li>
+                <li>Activate virtual environment:  source activate</li>
+                <li>Install a new application : pip3 install schedule</li>
+                <li>Install django : pip3 install django ‘or’ python3 -m pip install django</li>
+                <li>Install REST Framework : pip3 install djangorestframework</li>
+                <li>Navigate to this file: cd weather_project</li>
+                <li>Populate database with csv file: python3 ./scripts/loadRecord.py</li>
+                <li>python3 manage.py makemigrations</li>
+                <li>python3 manage.py migrate</li>
+                <li>Run server: python3 manage.py runserver</li>
+                <li>open http://127.0.0.1:8000/</li>
+            </ol>
+        </p>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  <h1>Weather Recrods for <i>{{ location_name }}</i>  </h1>
+  <table border="1">
+    <tr>
+      <th>Location</th>
+      <th>Year</th>
+      <th>Month</th>
+      <th>Day</th>
+      <th>Daily Rainfall Total (mm)</th>
+      <th>Highest 30 min Rainfall (mm)</th>
+      <th>Highest 60 min Rainfall (mm)</th>
+      <th>Highest 120 min Rainfall (mm)</th>
+      <th>Mean Temperature (°C)</th>
+      <th>Maximum Temperature (°C)</th>
+      <th>Minimum Temperature (°C)</th>
+      <th>Mean Wind Speed (km/h)</th>
+      <th>Max Wind Speed (km/h)</th>
+    </tr>
+    {% for record in weather_records %}
+    <tr>
+      <td>{{ record.location }}</td>
+      <td>{{ record.year }}</td>
+      <td>{{ record.month }}</td>
+      <td>{{ record.day }}</td>
+      <td>{{ record.daily_rainfall_total }}</td>
+      <td>{{ record.highest_30min_rainfall }}</td>
+      <td>{{ record.highest_60min_rainfall }}</td>
+      <td>{{ record.highest_120min_rainfall }}</td>
+      <td>{{ record.mean_temperature }}</td>
+      <td>{{ record.max_temperature }}</td>
+      <td>{{ record.min_temperature }}</td>
+      <td>{{ record.mean_wind_speed }}</td>
+      <td>{{ record.max_wind_speed }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+
+    <h1>Select Location for Extreme Weather Data</h1>
+    <form method="post" action="{% url 'get-extreme-weather' %}">
+        {% csrf_token %}
+        <label for="location">Choose a location:</label>
+        <select id="location" name="location">
+            {% for location in locations %}
+                <option value="{{ location.id }}">{{ location.name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
