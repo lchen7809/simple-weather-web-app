@@ -1,11 +1,9 @@
-# README 
-# This is a RESTFUL API application done with Python and Django.
-# weather data "area_clean_data.csv" is used, pre-processed on jyupiter 
-# This web application allow weathermen to query data from the database as and when they need it. 
-# Midterm project for Advanced Web Development module.
-# Frontend design is still under development.
+* This is a RESTFUL API application done with Python and Django.
+* This web application allow weathermen to query data from the database as and when they need it. 
+* Midterm project for Advanced Web Development module.
+* Frontend design is still under development.
 
-# Video Demo of this web application is available at: https://youtu.be/L98DBkxv0hg 
+Video Demo of this web application is available at: https://youtu.be/L98DBkxv0hg 
 
 # Django admin superuser
 # username: student
