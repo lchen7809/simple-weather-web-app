@@ -1,7 +1,7 @@
 # README 
 # This is a RESTFUL API application done with Python and Django, 
-# containing weather data from the "area_clean_data.csv" csv file, 
-# to allow weather man to query data from the database as and when they need. 
+# containing weather data from the "area_clean_data.csv" csv file, pre-processed on jyupiter specially for this application,
+# to allow weathermen to query data from the database as and when they need it. 
 
 # Django admin superuser
 # username: student
